@@ -1,0 +1,22 @@
+if __name__ == '__main__':
+    lis1 =[]
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        lis=[]
+        lis.append(score)
+        lis.append(name)
+        lis1.append(lis)
+    lis1.sort()
+    minscore = lis1[0][0]
+    secondminscore= 0;
+    
+    for templist in lis1:
+        if(templist[0]!=minscore):
+            secondminscore=templist[0]
+            break
+        
+    names=[tlis[1] for tlis in lis1 if tlis[0]==secondminscore];
+    names.sort()
+    for name in names:
+        print(name)
