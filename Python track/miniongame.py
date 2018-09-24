@@ -35,3 +35,15 @@ def minion_game(string):
         print('Kevin ' + str(kevinscore))
     else:
         print('Draw')
+
+
+def merge_the_tools(string, k):
+    # your code goes here
+    split = int(len(string) / k)
+    i = 0
+    while (i <= len(string)):
+        temp = string[i:i + split]
+        print("".join(set(temp))[::-1])
+
+        i = i + split
+
